@@ -206,8 +206,8 @@ public void ShowHitmarker(int client)
 	SetHudTextParams(-1.0, -1.0, 0.3, 255, 0, 0, 255, 0, 0.1, 0.1, 0.1);
 
 	#if defined DYNAMIC_CHANNELS
-	ShowHudText(client, GetDynamicChannel(g_cvChannel.IntValue), "⸬");
+	ShowHudText(client, GetDynamicChannel(g_cvChannel.IntValue), "∷");
 	#else
-	ShowHudText(client, g_cvChannel.IntValue, "⸬");
+	ShowHudText(client, g_cvChannel.IntValue, "∷");
 	#endif
 }
