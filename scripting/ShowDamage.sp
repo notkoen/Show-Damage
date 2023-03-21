@@ -30,6 +30,9 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 {
+	g_cHitmarker = RegClientCookie("sm_showdamage_hitmarker_cookie", "Show damage hitmarker cookie", CookieAccess_Private);
+	g_cShowDamage = RegClientCookie("sm_showdamage_enable_cookie", "Show damage hud display cookie", CookieAccess_Private);
+
 	HookEvent("player_hurt", HookPlayerHurt, EventHookMode_Post);
 
 	g_cvChannel = CreateConVar("sm_showdamage_channel", "5", "game_text channel to display hitmarkers on", _, true, 0.0, true, 5.0);
