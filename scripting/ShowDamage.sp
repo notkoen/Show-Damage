@@ -178,6 +178,9 @@ public Action HookPlayerHurt(Handle event, const char[] name, bool dontBroadcast
 	damage = GetEventInt(event, "dmg_health");
 	healthRemaining = GetEventInt(event, "health");
 
+	if (attacker == 0)
+		return Plugin_Continue;
+
 	if (g_bShowDamage[attacker])
 	{
 		if (!IsClientInGame(attacker))
